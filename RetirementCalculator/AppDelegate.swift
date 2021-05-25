@@ -5,6 +5,8 @@
 //  Created by Abdulaziz AlObaili on 26/05/2021.
 //
 
+import AppCenterAnalytics
+import AppCenterCrashes
 import UIKit
 
 @main
@@ -13,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        AppCenter.start(withAppSecret: "e5987090-8843-4606-9991-293d5617b33f", services: [Analytics.self, Crashes.self])
+
         return true
     }
 
