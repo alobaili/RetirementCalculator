@@ -16,6 +16,7 @@
 		4B415C0B265DAF790097AB67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B415C09265DAF790097AB67 /* LaunchScreen.storyboard */; };
 		4B415C16265DAF790097AB67 /* RetirementCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B415C15265DAF790097AB67 /* RetirementCalculatorTests.swift */; };
 		4B415C21265DAF790097AB67 /* RetirementCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B415C20265DAF790097AB67 /* RetirementCalculatorUITests.swift */; };
+		4B415C2F265EA57A0097AB67 /* Analytics+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B415C2E265EA57A0097AB67 /* Analytics+Event.swift */; };
 		A528E97009C8AF30B18C5B90 /* Pods_RetirementCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC7433732086C10B00F3357 /* Pods_RetirementCalculatorTests.framework */; };
 		AA4DBAC28038F2476E592435 /* Pods_RetirementCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6E82196C63D60C031F9E04 /* Pods_RetirementCalculator.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		4B415C1C265DAF790097AB67 /* RetirementCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetirementCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B415C20265DAF790097AB67 /* RetirementCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetirementCalculatorUITests.swift; sourceTree = "<group>"; };
 		4B415C22265DAF790097AB67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B415C2E265EA57A0097AB67 /* Analytics+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Analytics+Event.swift"; sourceTree = "<group>"; };
 		546939540220B6F33FD8E9EE /* Pods-RetirementCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetirementCalculator.release.xcconfig"; path = "Target Support Files/Pods-RetirementCalculator/Pods-RetirementCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		7730E21E4BF6654116E1DAD6 /* Pods-RetirementCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetirementCalculatorTests.release.xcconfig"; path = "Target Support Files/Pods-RetirementCalculatorTests/Pods-RetirementCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		8717F15C49E829374BD60CE7 /* Pods-RetirementCalculator-RetirementCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetirementCalculator-RetirementCalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-RetirementCalculator-RetirementCalculatorUITests/Pods-RetirementCalculator-RetirementCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				4B415C07265DAF790097AB67 /* Assets.xcassets */,
 				4B415C09265DAF790097AB67 /* LaunchScreen.storyboard */,
 				4B415C0C265DAF790097AB67 /* Info.plist */,
+				4B415C2E265EA57A0097AB67 /* Analytics+Event.swift */,
 			);
 			path = RetirementCalculator;
 			sourceTree = "<group>";
@@ -165,7 +168,6 @@
 				48F7F9C99E4DB8385340BBE2 /* Pods-RetirementCalculatorTests.debug.xcconfig */,
 				7730E21E4BF6654116E1DAD6 /* Pods-RetirementCalculatorTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -372,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B415C03265DAF760097AB67 /* ViewController.swift in Sources */,
+				4B415C2F265EA57A0097AB67 /* Analytics+Event.swift in Sources */,
 				4B415BFF265DAF760097AB67 /* AppDelegate.swift in Sources */,
 				4B415C01265DAF760097AB67 /* SceneDelegate.swift in Sources */,
 			);
@@ -551,6 +554,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = NCT5DLQUJC;
 				INFOPLIST_FILE = RetirementCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
