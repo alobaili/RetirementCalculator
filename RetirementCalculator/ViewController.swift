@@ -36,10 +36,15 @@ class ViewController: UIViewController {
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         guard
             let currentAge = Int(ageTextField.text!),
-            let plannedRetirementAge = Int(retirementAgeTextField.text!)
+            let plannedRetirementAge = Int(retirementAgeTextField.text!),
+            let monthlyInvestment = Float(monthlyInvestmentsTextField.text!),
+            let currentSavings = Float(savingsTextFields.text!),
+            let interestRate = Float(interestRateTextField.text!)
         else {
             return
         }
+
+        resultLabel.text = "If you save $\(monthlyInvestment) every month for \(plannedRetirementAge - currentAge) years, and invest your current money plus your current investment of \(currentSavings) at a \(interestRate)% annual interest rate, you will save $X by the time you are \(plannedRetirementAge)."
 
         let properties: [Analytics.Property: String] = [
             .currentAge: String(currentAge),
