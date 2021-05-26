@@ -44,7 +44,15 @@ class ViewController: UIViewController {
             return
         }
 
-        resultLabel.text = "If you save $\(monthlyInvestment) every month for \(plannedRetirementAge - currentAge) years, and invest your current money plus your current investment of \(currentSavings) at a \(interestRate)% annual interest rate, you will save $X by the time you are \(plannedRetirementAge)."
+        let retirementAmount = calculateRetirementAmount(
+            currentAge: currentAge,
+            retirementAge: plannedRetirementAge,
+            monthlyInvestment: monthlyInvestment,
+            currentSavings: currentSavings,
+            interestRate: interestRate
+        )
+
+        resultLabel.text = "If you save $\(monthlyInvestment) every month for \(plannedRetirementAge - currentAge) years, and invest your current money plus your current investment of \(currentSavings) at a \(interestRate)% annual interest rate, you will save $\(retirementAmount) by the time you are \(plannedRetirementAge)."
 
         let properties: [Analytics.Property: String] = [
             .currentAge: String(currentAge),
@@ -52,5 +60,24 @@ class ViewController: UIViewController {
         ]
 
         Analytics.trackEvent(.calculateRetirementAmout, withProperties: properties)
+    }
+
+    func calculateRetirementAmount(
+        currentAge: Int,
+        retirementAge: Int,
+        monthlyInvestment: Float,
+        currentSavings: Float,
+        interestRate: Float
+    ) -> Double {
+        let monthsUntilRetirement = (retirementAge - currentAge) * 12
+
+        var retirementAmount = Double(currentSavings) * pow(Double(1 + interestRate / 100), Double(monthsUntilRetirement))
+
+        for i in 1...monthsUntilRetirement {
+            let monthlyRate = interestRate / 100 / 12
+            retirementAmount += Double(monthlyInvestment) * pow(Double(1 + monthlyRate), Double(i))
+        }
+
+        return retirementAmount
     }
 }
