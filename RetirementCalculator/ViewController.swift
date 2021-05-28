@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             interestRate: interestRate
         )
 
-        resultLabel.text = "If you save $\(monthlyInvestment) every month for \(plannedRetirementAge - currentAge) years, and invest your current money plus your current investment of \(currentSavings) at a \(interestRate)% annual interest rate, you will save $\(retirementAmount) by the time you are \(plannedRetirementAge)."
+        resultLabel.text = "If you save $\(monthlyInvestment) every month for \(plannedRetirementAge - currentAge) years, and invest your current money plus your current investment of \(currentSavings) at a \(interestRate)% annual interest rate, you will save $\(retirementAmount) by the time you are \(plannedRetirementAge)!"
 
         let properties: [Analytics.Property: String] = [
             .currentAge: String(currentAge),
